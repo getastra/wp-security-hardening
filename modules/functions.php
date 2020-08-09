@@ -527,12 +527,13 @@ class tableViewOutput
 
         $current_points = 0;
         $this->last_results = get_option('whp_scan_results');
-        if (count((array)$this->last_results) > 0)
-            foreach ((array)$this->last_results as $key => $value) {
+        if (!empty($this->last_results) && is_array($this->last_results)) {
+            foreach ($this->last_results as $key => $value) {
                 if ($value['status'] == 'success') {
                     $current_points = $current_points + $this->issues_list[$key]['weight'];
                 }
             }
+        }
         $pers = (int)($current_points * 100 / $total_points);
         return $pers;
     }
@@ -546,7 +547,9 @@ class tableViewOutput
     {
 
         foreach ((array)$this->last_results as $key => $value) {
-
+            if (!is_array($value)) {
+                continue;
+            }
 
             if ($value['status'] == 'error') {
                 $this->out_error[] = '

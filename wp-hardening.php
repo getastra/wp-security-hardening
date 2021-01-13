@@ -32,7 +32,7 @@ if (!class_Exists('wphMainStart')) {
             add_action('plugins_loaded', array($this, 'myplugin_init'));
 
  
-            add_action('init', array($this,'jQuery_library'));
+          
             
 
 
@@ -40,13 +40,7 @@ if (!class_Exists('wphMainStart')) {
         }
 
 
-
-function jQuery_library() {
  
-  wp_register_script( 'wp_security_hardening_script', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array('jquery') );
-  wp_enqueue_script('wp_security_hardening_script', null, true);
-} 
-
 
 
         function myplugin_init()

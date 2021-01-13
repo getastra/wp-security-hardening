@@ -574,7 +574,27 @@ class tableViewOutput
         $this->last_results = get_option('whp_scan_results');
         $this->last_results_time = get_option('whp_scan_results_time');
 
+        add_action( 'admin_notices', array($this,'remove_localstorage') );
+
     }
+
+
+public function remove_localstorage()
+    {
+
+        
+        if(isset($_REQUEST['activate']) && $_REQUEST['activate']=='true')
+        {  
+        ?>
+       <script type="text/javascript">
+        localStorage.setItem("historyvalueBrowser", '');
+        location.reload();
+    </script>
+        
+    <?php 
+}
+    }
+
 
     public function return_status($slug)
     {

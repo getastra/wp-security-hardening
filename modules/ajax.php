@@ -126,6 +126,9 @@ function whp_process_fixer()
         $fixer_options = get_option('whp_fixer_option');
         $fixer_options[$id] = $value;
 
+        // echo '<pre>';
+        // print_r($fixer_options);
+
         update_option('whp_fixer_option', $fixer_options);
 
         switch ($id) {
@@ -148,14 +151,19 @@ function whp_process_fixer()
             case "change_login_url":
 
                 if ($value == 'on') {
+                    
                     $admin_url = sanitize_title($_POST['custom_admin_slug']);
                     update_site_option('whp_admin_page', $admin_url);
                     update_option('whp_admin_page', $admin_url);
                 } else {
+
                     $admin_url = sanitize_title($_POST['custom_admin_slug']);
                     delete_site_option('whp_admin_page');
                     delete_option('whp_admin_page');
                 }
+
+
+             
 
 
                 break;

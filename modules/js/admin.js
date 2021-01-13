@@ -60,11 +60,26 @@ jQuery(document).ready(function ($) {
 
 // fixers processing
     $('body').on('click', '.trace_switch', function (e) {
+
         e.stopPropagation();
 
 
         var parent_pnt = $(this).parents('.whp-switch-wrap');
-        if ($(this).attr('checked') == 'checked') {
+        if ($(this).prop('checked') == true) {
+         
+
+
+         if ($(this).attr('id') == 'report_email') {
+
+            var data = {
+                value: 'on',
+                id: $(this).attr('id'),
+                custom_admin_report_email: $('#custom_admin_report_email').val(),
+                action: 'process_fixer',
+                security: whp_local_data.nonce
+            }
+
+         }else{ 
             var data = {
                 value: 'on',
                 id: $(this).attr('id'),
@@ -72,7 +87,7 @@ jQuery(document).ready(function ($) {
                 action: 'process_fixer',
                 security: whp_local_data.nonce
             }
-
+}
             if ($(this).attr('id') == 'change_login_url') {
                 var string = $('#custom_admin_slug').val();
 
@@ -91,7 +106,33 @@ jQuery(document).ready(function ($) {
 
                 $('#custom_admin_slug').attr('readonly', true);
             }
+
+
+
+             if ($(this).attr('id') == 'report_email') {
+                var string = $('#custom_admin_report_email').val();
+
+                // if (!isAlphaOrParen(string)) {
+                //     e.preventDefault();
+                //    // alert(whp_local_data.wrong_admin);
+                //     $('#report_email').click();
+                //     return true;
+                // }
+
+                //var new_login_url = whp_local_data.home_url + (whp_local_data.permalink_structure.length == 0 ? '?' : '') + $('#custom_admin_report_email').val();
+
+                $('#whp-login-change-success').addClass('show');
+                $('#whp-login-change-success').fadeIn();
+                //$('#whp-login-change-success span.msg').html('Your login page is now accessible at: ' + new_login_url.link(new_login_url) + '. Bookmark this page!');
+
+                $('#custom_admin_report_email').attr('readonly', true);
+            }
+
+
+
+
         } else {
+
             var data = {
                 value: 'off',
                 id: $(this).attr('id'),
@@ -101,6 +142,12 @@ jQuery(document).ready(function ($) {
             }
             if ($(this).attr('id') == 'change_login_url') {
                 $('#custom_admin_slug').attr('readonly', false);
+                $('#whp-login-change-success').removeClass('show');
+                $('#whp-login-change-success').fadeOut();
+            }
+
+            if ($(this).attr('id') == 'report_email') {
+                $('#custom_admin_report_email').attr('readonly', false);
                 $('#whp-login-change-success').removeClass('show');
                 $('#whp-login-change-success').fadeOut();
             }

@@ -268,7 +268,8 @@ if( !class_exists('whpFormElementsClass') ){
 						 
 										),
 									),
-									
+ 
+ 									
 
 
 								);
@@ -293,7 +294,9 @@ if( !class_exists('whpFormElementsClass') ){
 										$switch_options = get_option('whp_fixer_option');
 
 										foreach( $single_top['variants'] as $single_line ){
-											 
+											
+ 
+
 											if( $single_line['slug'] == 'change_login_url' ){
 												$out .= '
 											<div class="row switcher_line">

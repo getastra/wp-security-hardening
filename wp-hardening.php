@@ -10,6 +10,7 @@ Version: 1.2
 Author: Astra Security
 Author URI: https://www.getastra.com/
 Stable tag: 1.2
+Text Domain: whp
 */
 
 

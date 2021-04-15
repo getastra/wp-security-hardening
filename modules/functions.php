@@ -385,11 +385,28 @@ class issuesScanClass
     public function firewall_check()
     {
 
-
+        if (isset($_SERVER['TRIAL']) && $_SERVER['TRIAL'] == 'true') {
+        	$this->response_results['has_firewall'] = array(
+                'status' => 'success',
+                'message' => __('Nice! Your site is private and doesn\'t need any further protection for now. ', 'whp'),
+                'details' => __('<a target="_blank" href="https://wordpress.org/plugins/getastra/">Astra Firewall</a> leverages continuous and comprehensive protection to your website. Astra firewall stops attacks like XSS, SQLi, LFI, RFI, Bad bots & 100+ type of security threats in real time.', 'whp'),
+            );
+            return true;	
+        		
+        }else if(strpos(get_site_url(),'themecloud') !== false){
+        		
+        	$this->response_results['has_firewall'] = array(
+                'status' => 'error',
+                'message' => __('Oops! Your site is not protected yet, please connect a domain to enable Astra Security firewall. ', 'whp'),
+                'details' => __('<a target="_blank" href="https://wordpress.org/plugins/getastra/">Astra Firewall</a> leverages continuous and comprehensive protection to your website. Astra firewall stops attacks like XSS, SQLi, LFI, RFI, Bad bots & 100+ type of security threats in real time.', 'whp'),
+            );
+            return false;
+        	
+        }else{
         if (!$this->is_firewall_installed()) {
             $this->response_results['has_firewall'] = array(
                 'status' => 'error',
-                'message' => __('Oops! We were not able to detect any WordPress security plugin on your website. ', 'whp'),
+                'message' => __('Oops! We were not able to detect Astra Security on your site. Please contact Themecloud support.', 'whp'),
                 'details' => __('<a target="_blank" href="https://wordpress.org/plugins/getastra/">Astra Firewall</a> leverages continuous and comprehensive protection to your website. Astra firewall stops attacks like XSS, SQLi, LFI, RFI, Bad bots & 100+ type of security threats in real time.', 'whp'),
             );
             return false;

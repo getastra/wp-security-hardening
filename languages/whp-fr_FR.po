@@ -1,0 +1,871 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Hardening\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2020-01-15 18:07+0530\n"
+"PO-Revision-Date: 2021-01-12 12:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:"
+"1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Loco-Version: 2.5.0; wp-5.6"
+
+#: modules/hooks.php:57
+#, php-format
+msgid ""
+"\n"
+"\t\t\t\t<p>Howdy! %s</p>\n"
+"\t\t\t\n"
+"\t\t\t\t<p>Greetings!</p>\n"
+"\t\t\t\n"
+"\t\t\t\t<p>As a part of our routine WordPress Hardening check, we ran a scan "
+"on %s. We found that there are still some improvements that can be made to "
+"harden the site. I have listed them below for your convenience:</p>\n"
+"\t\t\t\t\t\t\n"
+"\t\t\t\t%s\n"
+"\t\t\t\t\t\t\t\t\n"
+"\t\t\t\t<p style=\"text-align:center;\"><a style=\"margin:10px auto; font-"
+"size:18px;\" href=\"%s\">Check the details here</a></p>\n"
+"\t\t\t\t\n"
+"\t\t\t\t<p>To ensure the maximum hardening of your WordPress website, we "
+"recommend that you implement the fixes at the earliest. You’ll find details "
+"of the fixes, under the ‘Hardening Audit’ tab in your WordPress backend.</p>"
+"\n"
+"\t\t\t\n"
+"\t\t\t\t<p>Thanks,</p>\n"
+"\t\t\t\t<p>Ananda from Astra</p>\n"
+"\n"
+"\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t<p>Howdy ! %s</p>\n"
+"\t\t\t\n"
+"\t\t\t\t<p>Salut ! </p>\n"
+"\t\t\t\n"
+"\t\t\t\t<p>Dans le cadre de notre contrôle de routine de la sécrité de "
+"WordPress, nous avons effectué un balayage sur les %s. Nous avons constaté "
+"que certaines améliorations peuvent encore être apportées pour protéger le "
+"site. Nous les avons énumérées ci-dessous :</p>\n"
+"\t\t\t\t\t\t\n"
+"\t\t\t\t%s\n"
+"\t\t\t\t\t\t\t\t\n"
+"\t\t\t\t<p style=\"text-align:center ;\"><a style=\"margin:10px auto ; font-"
+"size:18px ;\" href=\"%s\">Vérifiez les détails ici</a></p>\n"
+"\t\t\t\t\n"
+"\t\t\t\t<p> Pour garantir un durcissement maximal de votre site WordPress, "
+"nous vous recommandons d'appliquer ces correctifs au plus tôt. Vous "
+"trouverez le détail des corrections sous l'onglet \"Audit de sécurité\" dans "
+"votre backend WordPress\n"
+"\t\t\t\n"
+"\t\t\t\t<p>Merci, </p>\n"
+"\t\t\t\t<p>Ananda de Astra</p>\n"
+"\n"
+"\t\t\t\t"
+
+#: modules/functions.php:648
+msgid " recommendations"
+msgstr " recommandations"
+
+#: modules/hooks.php:43
+#, php-format
+msgid "%d WordPress Hardening recommendations for %s"
+msgstr "Recommandations pour la sécurité du %d WordPress pour les %s"
+
+#: modules/functions.php:645
+#, php-format
+msgid "%s Site Health"
+msgstr "%s Santé du site"
+
+#: modules/functions.php:333
+msgid ""
+"<a target=\"_blank\" href=\"https://wordpress.org/plugins/getastra/\">Astra "
+"Firewall</a> leverages continuous and comprehensive protection to your "
+"website. Astra firewall stops attacks like XSS, SQLi, LFI, RFI, Bad bots & "
+"100+ type of security threats in real time."
+msgstr ""
+"<a target=\"_blank\" href=\"https://wordpress.org/plugins/getastra/\">Astra "
+"Firewall</a> assure une protection continue et complète de votre site web. "
+"Le pare-feu Astra bloque en temps réel les attaques de type XSS, SQLi, LFI, "
+"RFI, Bad bots et plus de 100 menaces de sécurité."
+
+#: modules/formElementsClass.php:123
+msgid "Activated"
+msgstr "Activé"
+
+#: modules/formElementsClass.php:184
+msgid "Admin & API Security"
+msgstr "Sécurité de l'administration et des API"
+
+#: modules/functions.php:248
+#, php-format
+msgid ""
+"An older WordPress version was detected on your Website. Update it ASAP to "
+"keep yourself secure. You need to update WordPress to %s. Your current "
+"version is: %s"
+msgstr ""
+"Une ancienne version de WordPress a été détectée sur votre site web. Mettez-"
+"la à jour dès que possible pour vous protéger. Vous devez mettre à jour "
+"WordPress en %s. Votre version actuelle est la suivante : %s"
+
+#: modules/formElementsClass.php:65
+msgid "Audit Recommendations"
+msgstr "Recommandations de l'audit"
+
+#: modules/functions.php:147
+msgid ""
+"Be sure to check with your host to make sure they have a plan to update "
+"before the security support ends."
+msgstr ""
+"Vérifiez auprès de votre hôte qu'il a un plan de mise à jour avant la fin du "
+"support de sécurité."
+
+#: modules/functions.php:253
+msgid "Bravo! Your WordPress Version is up to date!"
+msgstr "Bravo ! Votre version WordPress est à jour !"
+
+#: modules/formElementsClass.php:193
+msgid "Change Login URL"
+msgstr "Changer l'URL de connexion"
+
+#: modules/functions.php:289
+msgid ""
+"Change to a stronger Password. Take help from this   <a href=\"https://www."
+"getastra.com/blog/knowledge-base/create-safe-and-secure-passwords/\" "
+"target=\"_blank\">guide</a>  to create strong passwords for your website."
+msgstr ""
+"Passez à un mot de passe plus fort. Aidez-vous de ce <a href=\"https://www."
+"getastra.com/blog/knowledge-base/create-safe-and-secure-passwords/\" "
+"target=\"_blank\">guide</a> pour créer des mots de passe forts pour votre "
+"site web."
+
+#: modules/functions.php:462
+msgid "Check for active PHP version"
+msgstr "Vérifier la version active de PHP"
+
+#: modules/formElementsClass.php:167
+msgid "Collapse All"
+msgstr "Tout effondrer"
+
+#: modules/formElementsClass.php:243
+msgid ""
+"Common page builders often are diagnosed with a vulnerability putting your "
+"website’s security at risk. With this toggle enabled, the version of these "
+"page builders will be hidden making it difficult for hackers to find if "
+"you’re using a vulnerable version."
+msgstr ""
+"Les créateurs de pages courants sont souvent confrontés à une vulnérabilité "
+"qui met en péril la sécurité de votre site web. Lorsque cette option est "
+"activée, la version de ces créateurs de pages est cachée, ce qui rend "
+"difficile pour les pirates de trouver si vous utilisez une version "
+"vulnérable."
+
+#: modules/functions.php:367
+msgid "Correct file permissions are in place."
+msgstr "Les permissions sur les fichiers sont bien configurées."
+
+#: modules/functions.php:580
+msgid "Critical"
+msgstr "Critique"
+
+#: modules/functions.php:469
+msgid "Database Password Strength"
+msgstr "Force du mot de passe de la base de données"
+
+#: modules/functions.php:470
+msgid "DB strength"
+msgstr "La force de la DB"
+
+#: modules/formElementsClass.php:285 modules/functions.php:563
+#: modules/functions.php:584
+msgid "Details"
+msgstr "Détails"
+
+#: modules/formElementsClass.php:209
+msgid "Disable File Editor"
+msgstr "Désactiver l'éditeur de fichiers"
+
+#: modules/formElementsClass.php:217
+msgid "Disable Information Disclosure & Remove Meta information"
+msgstr ""
+"Désactiver la divulgation d'informations et supprimer les méta-informations"
+
+#: modules/formElementsClass.php:204
+msgid "Disable WP API JSON"
+msgstr "Désactiver le WP API JSON"
+
+#: modules/formElementsClass.php:199
+msgid "Disable XMLRPC"
+msgstr "Désactiver XMLRPC"
+
+#: modules/formElementsClass.php:129
+msgid "Disabled"
+msgstr "Handicapés"
+
+#: modules/formElementsClass.php:146
+msgid "Enable Firewall"
+msgstr "Activer le pare-feu"
+
+#: modules/formElementsClass.php:312
+msgid "Enter new slug"
+msgstr "Saisir une nouvelle limace"
+
+#: modules/functions.php:136
+msgid "Error checking PHP health."
+msgstr "Erreur de vérification de la santé du PHP."
+
+#: modules/formElementsClass.php:166
+msgid "Expand All"
+msgstr "Tout développer"
+
+#: modules/functions.php:484
+msgid "File Permission"
+msgstr "Permissions sur les fichiers"
+
+#: modules/functions.php:483
+msgid "File Permission Checker"
+msgstr "Contrôleur d'autorisation de fichier"
+
+#: modules/functions.php:368
+msgid ""
+"File permissions ensure privacy as well as security of your website. Glad "
+"you know that too :-)"
+msgstr ""
+"Les permissions sur les fichiers garantissent la confidentialité ainsi que "
+"la sécurité de votre site web. Heureux que vous le sachiez aussi :-)"
+
+#: modules/formElementsClass.php:142
+msgid "Firewall Detected"
+msgstr "Pare-feu détecté"
+
+#: modules/functions.php:476
+msgid "Firewall Status"
+msgstr "État du pare-feu"
+
+#: modules/functions.php:341 modules/functions.php:347
+msgid ""
+"Firewalls are a great way to monitor & protect your website against hacks. "
+"But, of course you know that :-) "
+msgstr ""
+"Les pare-feu sont un excellent moyen de surveiller et de protéger votre site "
+"web contre les pirates. Mais, bien sûr, vous savez que :-)"
+
+#: modules/formElementsClass.php:108
+msgid ""
+"Further strengthen your WordPress site and make it difficult for hackers, "
+"enable security fixers"
+msgstr ""
+"Renforcer votre site WordPress et le rendre plus difficile pour les pirates, "
+"permettre aux correcteurs de sécurité"
+
+#: modules/formElementsClass.php:45
+msgid "Get Malware Cleanup"
+msgstr "Nettoyer les logiciels malveillants"
+
+#: modules/functions.php:282
+msgid "Good job using strong passwords for your database!"
+msgstr ""
+"Bon travail d'utilisation de mots de passe forts pour votre base de données !"
+
+#: modules/functions.php:145
+#, php-format
+msgid ""
+"Good job! Your server is running PHP version %1$s which will receive "
+"security updates until %2$s."
+msgstr ""
+"Bon travail ! Votre serveur exécute la version PHP %1$s qui recevra des "
+"mises à jour de sécurité jusqu'à %2$s."
+
+#: modules/functions.php:340
+msgid "Great! All your plugins are running on the latest versions!"
+msgstr "Bravo, toutes vos extensions sont à jour !"
+
+#: modules/formElementsClass.php:188
+msgid ""
+"Hackers & bad bots can easily find usernames in WordPress by visiting URLs "
+"like yourwebsite.com/?author=1. This can significantly help them in "
+"performing larger attacks like Bruteforce & SQL injection."
+msgstr ""
+"Les pirates et les mauvais robots peuvent facilement trouver des noms "
+"d'utilisateurs dans WordPress en visitant des URL comme yourwebsite.com/?"
+"author=1. Cela peut les aider considérablement à réaliser des attaques plus "
+"importantes comme Bruteforce et l'injection SQL."
+
+#: modules/settings.php:213 modules/settings.php:214
+msgid "Hardening Audit"
+msgstr "Audit de sécurité"
+
+#: modules/functions.php:477
+msgid "Has Firewall"
+msgstr "Possède un pare-feu"
+
+#: modules/settings.php:260 modules/settings.php:261
+msgid "Help"
+msgstr "Aide"
+
+#: modules/formElementsClass.php:284 modules/functions.php:562
+#: modules/functions.php:583
+msgid "Hide"
+msgstr "Cacher"
+
+#: modules/formElementsClass.php:264
+msgid "Hide Directory Listing of WP includes"
+msgstr "Cacher la liste de l'annuaire du WP comprend"
+
+#: modules/formElementsClass.php:222
+msgid "Hide WordPress Version Number"
+msgstr "Masquer le numéro de version WordPress"
+
+#: modules/functions.php:167 modules/functions.php:174
+msgid "Hurray! Your PHP version is up to date!"
+msgstr "Hourra ! Votre version de PHP est à jour !"
+
+#: modules/formElementsClass.php:210
+msgid ""
+"If a hacker is able to get access to your WordPress admin, with the file "
+"editor enabled it becomes quite easy for them to add malicious code to your "
+"theme or plugins. If you are not using this, it’s best to keep the file "
+"editor disabled."
+msgstr ""
+"Si un pirate informatique est capable d'accéder à votre administrateur "
+"WordPress, avec l'éditeur de fichiers activé, il devient assez facile pour "
+"lui d'ajouter du code malveillant à votre thème ou à vos plugins. Si vous ne "
+"l'utilisez pas, il est préférable de laisser l'éditeur de fichiers désactivé."
+
+#: modules/hooks.php:96
+msgid "Improve Hardening"
+msgstr "Améliorer la sécurité"
+
+#: modules/functions.php:456
+msgid "Inactive plugins"
+msgstr "Plugins inactifs"
+
+#: modules/functions.php:654
+msgid "Last Audit on "
+msgstr "Dernier audit sur"
+
+#: modules/functions.php:887
+msgid "Login url"
+msgstr "URL de connexion"
+
+#: modules/hooks.php:299
+msgid "Make Audit"
+msgstr "Faire un audit"
+
+#: modules/functions.php:378
+msgid ""
+"Managing and securing file permission should not be overlooked. This <a "
+"href=\"https://www.getastra.com/blog/cms/wordpress-security/fixing-wordpress-"
+"file-permissions/\" target=\"_blank\" >guide</a> will help you secure the "
+"recommended file permissions on your WordPress. <br/><br/><table "
+"class=\"table table-responsive table-striped\"><thead><tr><th>Current "
+"Permission</th><th>File Path</th></tr></thead><tbody>"
+msgstr ""
+"Il ne faut pas négliger la configuration des permissions sur les fichiers. "
+"Vous pouvez les réinitialiser correctement en activant puis désactivant "
+"l'option \"Read Only\" depuis votre interface de gestion Themecloud."
+
+#: modules/formElementsClass.php:248
+msgid ""
+"Many CSS files have the WordPress version number appended to their source, "
+"for cache purposes. Knowing the version number allows hackers to exploit "
+"known vulnerabilities."
+msgstr ""
+"De nombreux fichiers CSS portent le numéro de version de WordPress en annexe "
+"de leur source, à des fins de cache. La connaissance du numéro de version "
+"permet aux pirates d'exploiter des vulnérabilités connues."
+
+#: modules/formElementsClass.php:253
+msgid ""
+"Many JS files have the WordPress version number appended to their source, "
+"for cache purposes. Knowing the version number allows hackers to exploit "
+"known vulnerabilities."
+msgstr ""
+"De nombreux fichiers JS ont le numéro de version WordPress annexé à leur "
+"source, à des fins de cache. La connaissance du numéro de version permet aux "
+"pirates d'exploiter des vulnérabilités connues."
+
+#: modules/formElementsClass.php:41
+msgid "Modify Settings"
+msgstr "Modifier les paramètres"
+
+#: modules/functions.php:158
+msgid ""
+"Move to the latest and secured version with this <a href=\"https://www."
+"getastra.com/blog/cms/wordpress-security/wordpress-security-guide/#3-Update-"
+"your-PHP-to-the-latest-version\">guide</a> here."
+msgstr ""
+"Passez à la version la plus récente et sécurisée avec ce <a href=\"https:"
+"//www.getastra.com/blog/cms/wordpress-security/wordpress-security-guide/#3-"
+"Update-your-PHP-to-the-latest-version\">guide</a> ici."
+
+#: modules/functions.php:930
+msgid "Network Settings"
+msgstr "Paramètres du réseau"
+
+#: modules/functions.php:853
+msgid "Networkwide default"
+msgstr "Défaillance à l'échelle du réseau"
+
+#: modules/functions.php:346
+msgid "Nice! You have a firewall installed."
+msgstr "Joli ! Vous avez installé un pare-feu."
+
+#: modules/functions.php:341 modules/functions.php:347
+#, fuzzy
+#| msgid ""
+#| "Nice! Your site is private and doesn't need any firther protection for "
+#| "now. "
+msgid ""
+"Nice! Your site is private and doesn't need any further protection for now. "
+msgstr ""
+"Votre site est privé et n'a pas besoin de protection supplémentaire pour "
+"l'instant."
+
+#: modules/hooks.php:373
+msgid "No, thanks"
+msgstr "Non, merci"
+
+#: modules/functions.php:340
+msgid "Oh wow! You are well-protected by Astra!"
+msgstr "Oh wow ! Vous êtes bien protégé par Astra !"
+
+#: modules/functions.php:463
+msgid "Old PHP Version"
+msgstr "Ancienne version de PHP"
+
+#: modules/functions.php:332
+msgid ""
+"Oops! We were not able to detect any WordPress security plugin on your "
+"website. "
+msgstr ""
+"Oups ! Nous n'avons pu détecter aucun plugin de sécurité WordPress sur votre "
+"site web"
+
+#: modules/functions.php:341 modules/functions.php:347
+msgid ""
+"Oops! We were not able to detect Astra Security on your site. Please contact "
+"Themecloud support. "
+msgstr ""
+"Oups ! Nous n'avons pas pu détecter Astra Security sur votre site. Veuillez "
+"contacter le support Themecloud."
+
+#: modules/functions.php:341 modules/functions.php:347
+msgid ""
+"Oops! Your site is not protected yet, please connect a domain to enable "
+"Astra Security firewall. "
+msgstr ""
+"Oups ! Votre site n'est pas encore protégé, veuillez connecter un domaine "
+"pour activer le pare-feu Astra Security"
+
+#: modules/functions.php:217
+msgid ""
+"Outdated plugins were detected on your website. Update them to the latest "
+"version to stay secure!"
+msgstr ""
+"Des plugins obsolètes ont été détectés sur votre site web. Mettez-les à jour "
+"avec la dernière version pour rester en sécurité !"
+
+#: modules/formElementsClass.php:78
+msgid "Passed Test"
+msgstr "Test réussi"
+
+#: modules/functions.php:651
+msgid "Passed Tests"
+msgstr "Tests réussis"
+
+#: modules/functions.php:275
+msgid "Password must include at least one letter!"
+msgstr "Le mot de passe doit comporter au moins une lettre !"
+
+#: modules/functions.php:271
+msgid "Password must include at least one number!"
+msgstr "Le mot de passe doit comporter au moins un chiffre !"
+
+#: modules/functions.php:267
+msgid "Password too short!"
+msgstr "Mot de passe trop court !"
+
+#: modules/functions.php:168 modules/functions.php:175
+#, php-format
+msgid "PHP version %s is recognized as the most secured version as of now. "
+msgstr ""
+"La version PHP %s est reconnue comme la version la plus sécurisée à l'heure "
+"actuelle"
+
+#: modules/formElementsClass.php:218
+msgid "Please clear your WordPress cache for these changes to reflect"
+msgstr ""
+"Veuillez vider votre cache WordPress pour que ces changements reflètent"
+
+#: modules/scripts.php:84
+msgid "Please enter an admin URL slug which only has alpha-numeric characters"
+msgstr ""
+"Veuillez entrer une URL d'administration qui ne comporte que des caractères "
+"alphanumériques"
+
+#: modules/functions.php:218
+#, php-format
+msgid ""
+"Plugins (%s) require immediate update. Follow this <a href=\"%s\">link</a>  "
+"to update now."
+msgstr ""
+"Les plugins (%s) nécessitent une mise à jour immédiate. Suivez ce <a "
+"href=\"%s\">lien</a> pour mettre à jour maintenant."
+
+#: modules/functions.php:377
+msgid "Poor file & folder permissions detected."
+msgstr "Mauvaises permissions de fichiers et de dossiers détectées."
+
+#: modules/formElementsClass.php:194
+msgid ""
+"Prevent admin password brute-forcing by changing the URL for the wp-admin "
+"login area. You can change the url only when this fixer is disabled."
+msgstr ""
+"Empêchez le forçage brutal du mot de passe de l'administrateur en modifiant "
+"l'URL de la zone de connexion wp-admin. Vous ne pouvez changer l'URL que "
+"lorsque ce correcteur est désactivé."
+
+#: modules/formElementsClass.php:75
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: modules/formElementsClass.php:237
+msgid "Remove Slider Revolution Meta Generator Tag"
+msgstr ""
+"Supprimer l'étiquette du générateur de métadonnées de Slider Revolution"
+
+#: modules/formElementsClass.php:252
+msgid "Remove Version from Script"
+msgstr "Supprimer la version du script"
+
+#: modules/formElementsClass.php:247
+msgid "Remove Version from Stylesheet"
+msgstr "Supprimer une version de la feuille de style"
+
+#: modules/formElementsClass.php:242
+msgid "Remove Visual Composer / WPBakery Page Builder Meta Generator Tag"
+msgstr ""
+"Supprimer l'étiquette du générateur de métadonnées de Visual Composer / "
+"WPBakery Page Builder"
+
+#: modules/formElementsClass.php:227
+msgid "Remove WordPress Meta Generator Tag"
+msgstr "Supprimer l'étiquette du générateur de métadonnées WordPress"
+
+#: modules/formElementsClass.php:232
+msgid "Remove WPML (WordPress Multilingual Plugin) Meta Generator Tag"
+msgstr ""
+"Supprimer l'étiquette du générateur de métadonnées WPML (WordPress "
+"Multilingual Plugin)"
+
+#: modules/formElementsClass.php:70
+msgid "Request a malware cleanup"
+msgstr "Demander un nettoyage de logiciels malveillants"
+
+#: modules/formElementsClass.php:36 modules/formElementsClass.php:161
+#: modules/settings.php:234 modules/settings.php:235
+msgid "Security Fixers"
+msgstr "Correcteurs de sécurité"
+
+#: modules/hooks.php:372
+msgid "Send Me Security Updates"
+msgstr "Envoyez-moi les mises à jour de sécurité"
+
+#: modules/formElementsClass.php:260
+msgid "Server Hardening"
+msgstr "Sécurité du serveur"
+
+#: modules/functions.php:961 modules/functions.php:967
+msgid "Settings"
+msgstr "Paramètres"
+
+#: modules/settings.php:23
+msgid "Settings saved"
+msgstr "Paramètres sauvegardés"
+
+#: modules/formElementsClass.php:205
+msgid ""
+"Since 4.4 version, WordPress added JSON REST API which largely benefits "
+"developers. However, it’s often targeted for bruteforce attacks just like in "
+"the case of xmlrpc. If you are not using it, best is to disable it."
+msgstr ""
+"Depuis la version 4.4, WordPress a ajouté l'API JSON REST qui profite "
+"largement aux développeurs. Cependant, il est souvent la cible d'attaques en "
+"force brute, comme dans le cas de xmlrpc. Si vous ne l'utilisez pas, le "
+"mieux est de la désactiver."
+
+#: modules/formElementsClass.php:238
+msgid ""
+"Slider revolution stays on the radar of hackers due to its popularity. An "
+"overnight hack in the version you’re using could lead your website "
+"vulnerable too. Make it difficult for hackers to exploit the vulnerabilities "
+"by disabling version number disclosure here."
+msgstr ""
+"La révolution des glisseurs reste dans le collimateur des pirates "
+"informatiques en raison de sa popularité. Un piratage du jour au lendemain "
+"dans la version que vous utilisez pourrait rendre votre site web vulnérable "
+"lui aussi. Rendez difficile l'exploitation des vulnérabilités par les "
+"pirates en désactivant la divulgation du numéro de version ici."
+
+#: modules/functions.php:450 modules/functions.php:457
+#: modules/functions.php:464 modules/functions.php:471
+#: modules/functions.php:478 modules/functions.php:485
+msgid "some issue description"
+msgstr "description de certains problèmes"
+
+#: modules/functions.php:288
+msgid ""
+"Sorry! The current database password is not strong. Try something more "
+"secure?"
+msgstr ""
+"Désolé ! Le mot de passe actuel de la base de données n'est pas fort. "
+"Essayez quelque chose de plus sûr ?"
+
+#: modules/formElementsClass.php:35
+msgid "Start a New Audit"
+msgstr "Commencer un nouvel audit"
+
+#: modules/formElementsClass.php:187
+msgid "Stop User Enumeration"
+msgstr "Recensement des utilisateurs de l'arrêt"
+
+#: modules/functions.php:880
+msgctxt "Text string for settings page"
+msgid "Change Admin Login URL"
+msgstr "Changer l'URL de connexion de l'administration"
+
+#: modules/functions.php:845
+msgctxt "Text string for settings page"
+msgid "Rename wp-login.php"
+msgstr "Renommer wp-login.php"
+
+#: modules/formElementsClass.php:228
+msgid ""
+"The WordPress Meta tag contains your WordPress version number which is best "
+"kept hidden"
+msgstr ""
+"La balise WordPress Meta contient votre numéro de version WordPress, qu'il "
+"est préférable de garder caché"
+
+#: modules/hooks.php:279 modules/hooks.php:303
+msgid ""
+"These recommendations are provided by WP Hardening, and are specific to your "
+"site. For more information, <a href=\"https://astra.sh/wp-knowledge-base\">"
+"read the documentation</a> or  <a href=\"https://astra.sh/wp-malware-"
+"removal\">contact us</a>"
+msgstr ""
+"Ces recommandations sont fournies par WP Hardening, et sont spécifiques à "
+"votre site. Pour plus d'informations, <a href=\"https://astra.sh/wp-"
+"knowledge-base\">lisez la documentation</a> ou <a href=\"https://astra.sh/wp-"
+"malware-removal\">contactez-nous</a>"
+
+#: modules/formElementsClass.php:233
+msgid "This discloses the WordPress version number which is best kept hidden."
+msgstr ""
+"Cela permet de connaître le numéro de version de WordPress qu'il est "
+"préférable de garder caché."
+
+#: modules/functions.php:987
+msgid "This feature is not enabled."
+msgstr "Cette fonction n'est pas activée."
+
+#: modules/formElementsClass.php:223
+msgid ""
+"This gives away your WordPress version number making life of a hacker simple "
+"as they’ll be able to find targeted exploits for your WordPress version. "
+"It’s best to keep this hidden, enabling the button shall do that."
+msgstr ""
+"Le numéro de votre version de WordPress est ainsi donné, ce qui simplifie la "
+"vie des pirates informatiques qui pourront trouver des exploits ciblés pour "
+"votre version de WordPress. Il est préférable de garder cela caché, "
+"l'activation du bouton le fera."
+
+#: modules/functions.php:848
+msgid ""
+"This option allows you to set a network-wide default, which can be "
+"overridden by individual sites. Simply go to to the site’s permalink "
+"settings to change the url."
+msgstr ""
+"Cette option vous permet de définir une valeur par défaut pour l'ensemble du "
+"réseau, qui peut être remplacée par des sites individuels. Il suffit d'aller "
+"dans les paramètres des permaliens du site pour modifier l'url."
+
+#: modules/functions.php:928
+#, php-format
+msgid "To set a networkwide default, go to %s."
+msgstr "Pour définir une valeur par défaut à l'échelle du réseau, allez à %s."
+
+#: modules/settings.php:287 modules/settings.php:288
+msgid "Upgrade to Firewall"
+msgstr "Mise à niveau vers un pare-feu"
+
+#: modules/functions.php:146
+msgid ""
+"Using an unsupported version of PHP means that you are using a version that "
+"no longer receives important security updates and fixes. Also, newer "
+"versions are faster which makes your site load faster. You must update your "
+"PHP or contact your host immediately!"
+msgstr ""
+"L'utilisation d'une version non supportée de PHP signifie que vous utilisez "
+"une version qui ne reçoit plus les mises à jour et corrections de sécurité "
+"importantes. De plus, les nouvelles versions sont plus rapides, ce qui "
+"accélère le chargement de votre site. Vous devez mettre à jour votre PHP ou "
+"contacter votre hébergeur immédiatement !"
+
+#: modules/hooks.php:275
+msgid "View all recommendations"
+msgstr "Voir toutes les recommandations"
+
+#: modules/formElementsClass.php:46
+msgid "View Help Docs"
+msgstr "Voir les documents d'aide"
+
+#: modules/functions.php:648
+msgid "View Results"
+msgstr "Voir les résultats"
+
+#: modules/formElementsClass.php:68
+msgid ""
+"We found the following improvements for your website.<br/>\n"
+"\t\t\t\t\t\t\t\tPlease review them below!"
+msgstr ""
+"Nous avons trouvé les améliorations suivantes pour votre site web.<br/>\n"
+"\t\t\t\t\t\t\t\tVeuillez les passer en revue ci-dessous !"
+
+#: modules/formElementsClass.php:32
+msgid "WordPress Hardening Audit"
+msgstr "Audit de sécurité WordPress"
+
+#: modules/functions.php:455
+msgid "WordPress plugin version check"
+msgstr "Vérification de la version du plugin WordPress"
+
+#: modules/formElementsClass.php:107
+msgid "WordPress Security Fixers"
+msgstr "Correctifs de sécurité pour WordPress"
+
+#: modules/functions.php:448
+msgid "WordPress version check"
+msgstr "Vérification de la version WordPress"
+
+#: modules/formElementsClass.php:33
+msgid ""
+"WP Harden performs a quick audit to assist you in Hardening your WordPress "
+"website"
+msgstr ""
+"WP Hardening effectue un audit rapide pour vous aider à sécuriser votre site "
+"WordPress"
+
+#: modules/settings.php:139 modules/settings.php:140 modules/settings.php:161
+#: modules/settings.php:162 modules/settings.php:184 modules/settings.php:185
+msgid "WP Hardening"
+msgstr "WP Protection"
+
+#: modules/formElementsClass.php:265
+msgid ""
+"WP-includes directory gives away a lot of information about your WordPress "
+"to hackers. Disable it by simply toggling the option to ensure you make "
+"reconnaissance of hackers difficult."
+msgstr ""
+"Le répertoire WP-includes donne aux pirates de nombreuses informations sur "
+"votre WordPress. Désactivez-le en basculant simplement l'option pour vous "
+"assurer que vous rendez la reconnaissance des pirates difficile."
+
+#: modules/functions.php:449
+msgid "Wrong WP version"
+msgstr "Mauvaise version du WP"
+
+#: modules/formElementsClass.php:200
+msgid ""
+"XMLRPC is often targeted by bots to perform brute force & DDoS attacks (via "
+"pingback) causing considerable stress on your server. However, there are "
+"some services which rely on xmlrpc. Be sure you definitely do not need "
+"xmlrpc before disabling it. If you are using Astra firewall, then you’re "
+"safe against xmlrpc attacks automatically."
+msgstr ""
+"XMLRPC est souvent ciblé par des robots pour effectuer des attaques par "
+"force brute et DDoS (via pingback), ce qui provoque un stress considérable "
+"sur votre serveur. Cependant, certains services reposent sur xmlrpc. Assurez-"
+"vous que vous n'avez pas besoin de xmlrpc avant de le désactiver. Si vous "
+"utilisez le pare-feu Astra, vous êtes automatiquement protégé contre les "
+"attaques xmlrpc."
+
+#: modules/functions.php:283
+msgid ""
+"You are following good password practices for your website. We recommend "
+"that you change your passwords often."
+msgstr ""
+"Vous suivez les bonnes pratiques en matière de mot de passe pour votre site "
+"web. Nous vous recommandons de changer souvent vos mots de passe."
+
+#: modules/formElementsClass.php:165
+msgid ""
+"You can enable/disable fixers as per your requirement. We’ve already enabled "
+"important ones for you."
+msgstr ""
+"Vous pouvez activer/désactiver les correcteurs selon vos besoins. Nous avons "
+"déjà activé les plus importants pour vous."
+
+#: modules/hooks.php:296
+msgid "You didnt made scan yet. Scan system to check issues."
+msgstr ""
+"Vous n'avez pas encore fait de scan. Système de balayage pour vérifier les "
+"problèmes."
+
+#: modules/functions.php:1016
+msgid "You must log in to access the admin area."
+msgstr "Vous devez vous connecter pour accéder à la zone d'administration."
+
+#: modules/functions.php:247
+msgid "You need to update WordPress to latest version"
+msgstr "Vous devez mettre à jour WordPress avec la dernière version"
+
+#: modules/functions.php:157
+msgid "Your current PHP version is outdated and can invite hackers."
+msgstr ""
+"Votre version actuelle de PHP est obsolète et peut inviter des pirates "
+"informatiques."
+
+#: modules/functions.php:952
+#, php-format
+msgid "Your login page is now here: %s. Bookmark this page!"
+msgstr ""
+"Votre page de connexion est maintenant ici : %s. Ajoutez cette page à vos "
+"favoris !"
+
+#: modules/functions.php:143
+#, php-format
+msgid ""
+"Your server is running PHP version %1$s which has not been supported since "
+"%2$s."
+msgstr ""
+"Votre serveur exécute la version de PHP %1$s qui n'est plus supportée depuis "
+"%2$s."
+
+#: modules/functions.php:612
+msgid "Your site is well protected"
+msgstr "Votre site est bien protégé"
+
+#: modules/hooks.php:286
+msgid "Your site is well protected."
+msgstr "Votre site est bien protégé."
+
+#: modules/functions.php:254
+#, php-format
+msgid "Your website is running the most secure version ( %s ) of WordPress."
+msgstr ""
+"Votre site web utilise la version la plus sécurisée ( %s ) de WordPress."

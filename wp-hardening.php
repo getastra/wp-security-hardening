@@ -187,14 +187,6 @@ if (!class_Exists('wphMainStart')) {
             $homeurl = home_url($_SERVER['REQUEST_URI']);
             $getvalue = strpos($homeurl, 'plugins.php');
 
-            if (isset($_REQUEST['historyvalue']) && $_REQUEST['historyvalue'] != '') {
-                ?>
-                <script type="text/javascript">
-                    localStorage.setItem("wphShowAdminPrompt", '<?php echo $_REQUEST['historyvalue'];?>');
-                </script>
-                <?php
-            }
-
             if ($getvalue === false) {
             } else {
 
@@ -208,9 +200,8 @@ if (!class_Exists('wphMainStart')) {
                         <?php _e('We have enabled 18 security fixes to protect your site. Please review them here.', 'wp-security-hardening'); ?>
                     </a>
 
-                    <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
-                        <input type="hidden" name="historyvalue" value="1">
-                        <input class="button button-primary" type="submit" name="submit" value="Got It."/>
+                    <form>
+                        <input class="button button-primary" onclick="localStorage.setItem('wphShowAdminPrompt', '1')" type="submit" name="submit" value="Got It."/>
                     </form>
 
                 </div>

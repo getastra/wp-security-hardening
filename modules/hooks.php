@@ -1,8 +1,8 @@
 <?php
-require_once(dirname(__FILE__, 3) . "/../../wp-includes/pluggable.php");
-require_once(dirname(__FILE__, 3) . "/../../wp-load.php");
-
 if (!defined('ABSPATH')) exit ('Peekaboo!');
+
+require_once(ABSPATH."/wp-includes/pluggable.php");
+require_once(ABSPATH."/wp-load.php");
 
 add_action( 'admin_footer', 'wh_admin_footer' );
 function wh_admin_footer(){

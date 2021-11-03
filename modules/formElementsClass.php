@@ -296,7 +296,7 @@ if( !class_exists('whpFormElementsClass') ){
 												'slug' => 'remove_revo_slider_meta_gen_tag'
 											),
 											array(
-												'title' => __( 'Remove Visual Composer / WPBakery Page Builder Meta Generator Tag', 'whp'),
+												'title' => __( 'Remove WPBakery Page Builder Meta Generator Tag', 'whp'),
                                                 'info' => __("Common page builders often are diagnosed with a vulnerability putting your website’s security at risk. With this toggle enabled, the version of these page builders will be hidden making it difficult for hackers to find if you’re using a vulnerable version.", 'whp'),
 												'slug' => 'remove_vc_meta_gen_tag'
 											),

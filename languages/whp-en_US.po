@@ -227,7 +227,7 @@ msgid ""
 msgstr ""
 
 #: modules/formElementsClass.php:242
-msgid "Remove Visual Composer / WPBakery Page Builder Meta Generator Tag"
+msgid "Remove WPBakery Page Builder Meta Generator Tag"
 msgstr ""
 
 #: modules/formElementsClass.php:243

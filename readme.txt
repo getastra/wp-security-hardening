@@ -80,7 +80,7 @@ Astra's vision is to make cyber security a five minute affair for businesses</p>
   <li><strong>Remove Slider Revolution Meta Generator Tag</strong>
     Slider revolution stays on the radar of hackers due to its popularity. An overnight hack in the version you’re using could lead your website vulnerable too. Make it difficult for hackers to exploit the vulnerabilities by disabling version number disclosure here<br>
   </li>
-  <li><strong>Remove Visual Composer / WPBakery Page Builder Meta Generator Tag</strong>
+  <li><strong>Remove WPBakery Page Builder Meta Generator Tag</strong>
     Common page builders often are diagnosed with a vulnerability putting your website’s security at risk. With this toggle enabled, the version of these page builders will be hidden making it difficult for hackers to find if you’re using a vulnerable version.<br>
   </li>
   <li><strong>Remove Version from Stylesheet</strong>

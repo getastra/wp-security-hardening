@@ -180,7 +180,19 @@ class issuesScanClass
             '7.4' => array(
                 'release' => 'December 6, 2018',
                 'eol' => 'December 6, 2025',
+			),
+
+            '8.0' => array(
+                'release' => 'November 26, 2020',
+                'eol' => 'November 26, 2023'
             ),
+
+			'8.1' => array(
+                'release' => 'November 25, 2021',
+                'eol' => 'November 25, 2024'
+            ),
+
+
         );
 
         $error = __('Error checking PHP health.', 'whp');
@@ -1183,5 +1195,3 @@ class WHP_Change_Login_URL
     }
 }
 
-
-?>

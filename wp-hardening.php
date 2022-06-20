@@ -106,7 +106,7 @@ if (!class_Exists('wphMainStart')) {
                 header("X-Frame-Options: deny");
             }
 
-            if (get_option('whp_radio_clickjacking_protection') == '3') {
+            if (get_option('whp_radio_clickjacking_protection') == '3' && !defined('DOING_CRON') ) {
                 header("X-Frame-Options: sameorigin");
             }
 

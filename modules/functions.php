@@ -218,7 +218,7 @@ class issuesScanClass
         array_pop($ststemversionExp);
         $system= implode('.', $ststemversionExp);
 
-        if ($system != $string) {
+        if ($system < $string) {
             // If EOL is passed, show unsupported message.
             $msg = $unsupported_version_message . ' ' . $unsupported_message;
 

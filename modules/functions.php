@@ -687,6 +687,7 @@ public function remove_localstorage()
     {
 
 
+        $list_messages = array();
         $cnt = 0;
         foreach ($this->last_results as $key => $value) {
             if ($value['status'] == 'success') {
@@ -699,6 +700,7 @@ public function remove_localstorage()
             $list_messages[] = '<li class="ov_hidden widget_row"> <span class="warning_sign pull-left margin_hor_10" ><i class="fa fa-exclamation-triangle icon_orange" aria-hidden="true"></i></span> <b>' . $this->issues_list[$key]['test_name'] . '</b> ' . $value['message'] . '<span class="warning_sign pull-right margin_hor_10" ><a href="' . admin_url('/admin.php?page=wphwp_harden#audit_bottom_block') . '"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></li>';
             $cnt++;
         }
+
         if (count($list_messages) == 0) {
             $list_messages = array('<li>' . __('Your site is well protected', 'whp') . '</li>');
         }

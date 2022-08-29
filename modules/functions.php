@@ -21,7 +21,7 @@ function whp_remove_appended_version_script_style($target_url)
 
     return $target_url;
 }
- 
+
 function remove_revslider_meta_tag()
 {
     return '';
@@ -80,8 +80,8 @@ class issuesScanClass
 
 
 
- 
- 
+
+
    public function wp_check_php_version() {
         $version = phpversion();
         $key     = md5( $version );
@@ -101,7 +101,7 @@ class issuesScanClass
                 return false;
             }
 
-             
+
             $response = json_decode( wp_remote_retrieve_body( $response ), true );
 
             if ( ! is_array( $response ) ) {
@@ -112,14 +112,14 @@ class issuesScanClass
         }
 
         if ( isset( $response['is_acceptable'] ) && $response['is_acceptable'] ) {
-            
+
 
             $response['is_acceptable'] = (bool) apply_filters( 'wp_is_php_version_acceptable', true, $version );
         }
 
         return $response;
     }
- 
+
 
 
 
@@ -176,23 +176,18 @@ class issuesScanClass
                 'release' => 'December 6, 2018',
                 'eol' => 'December 6, 2021',
             ),
-
             '7.4' => array(
                 'release' => 'December 6, 2018',
                 'eol' => 'December 6, 2025',
 			),
-
             '8.0' => array(
                 'release' => 'November 26, 2020',
                 'eol' => 'November 26, 2023'
             ),
-
 			'8.1' => array(
                 'release' => 'November 25, 2021',
                 'eol' => 'November 25, 2024'
             ),
-
-
         );
 
         $error = __('Error checking PHP health.', 'whp');
@@ -202,14 +197,9 @@ class issuesScanClass
         $site_version = $version[0] . '.' . $version[1];
 
 
-        $unsupported_version_message = sprintf(__('Your server is running PHP version %1$s which has not been supported since %2$s.', 'whp'), $site_version, $php_versions[$site_version]['eol']);
-        /* translators: %s: Version of PHP and the date the version of PHP stops receiving security updates */
-        $supported_version_message = sprintf(__('Good job! Your server is running PHP version %1$s which will receive security updates until %2$s.', 'whp'), $site_version, $php_versions[$site_version]['eol']);
-        $unsupported_message = __('Using an unsupported version of PHP means that you are using a version that no longer receives important security updates and fixes. Also, newer versions are faster which makes your site load faster. You must update your PHP or contact your host immediately!', 'whp');
-        $security_ending_message = __('Be sure to check with your host to make sure they have a plan to update before the security support ends.', 'whp');
-
         $eol_time = strtotime($php_versions[$site_version]['eol']);
         $today = time();
+        $eol_suggest_time = $today + 60*60*24*180;
 
         $data = $this->wp_check_php_version();
         $string = $data['recommended_version'];
@@ -218,28 +208,37 @@ class issuesScanClass
         array_pop($ststemversionExp);
         $system= implode('.', $ststemversionExp);
 
-        if ($system != $string) {
+        if ($eol_time < $today) {
             // If EOL is passed, show unsupported message.
-            $msg = $unsupported_version_message . ' ' . $unsupported_message;
+            $unsupported_version_message = sprintf(__('Your server is running PHP version %1$s which has not been supported since %2$s.', 'whp'), $site_version, $php_versions[$site_version]['eol']);
+            $unsupported_message = __('Using an unsupported version of PHP means that you are using a version that no longer receives important security updates and fixes. Also, newer versions are faster which makes your site load faster. You must update your PHP or contact your host immediately!', 'whp');
 
+            $this->response_results['php_version'] = array(
+                'status' => 'error',
+                'message' => $unsupported_version_message,
+                'details' => $unsupported_message,
+            );
 
+        } else if ($eol_time < $eol_suggest_time) {
+            // If EOL is coming up within the next 180 days, show expiring soon message.
+            $expiring_version_message = sprintf(__('Your server is running PHP version %1$s which is going to expire in %2$s.', 'whp'), $site_version, $php_versions[$site_version]['eol']);
+            $security_ending_message = __('Be sure to check with your host to make sure they have a plan to update before the security support ends.', 'whp');
+            $this->response_results['php_version'] = array(
+                'status' => 'error',
+                'message' => $expiring_version_message,
+                'details' => $security_ending_message,
+            );
+
+        } else if ($system < $string) {
+            // If the php version is lower than suggested version, show outdated message.
             $this->response_results['php_version'] = array(
                 'status' => 'error',
                 'message' => sprintf(__('Your current PHP version (%s) is outdated and can invite hackers.', 'whp'), $system),
                 'details' => sprintf(__('Move to the latest and secured version (%s) with this <a href="https://www.getastra.com/blog/cms/wordpress-security/wordpress-security-guide/#3-Update-your-PHP-to-the-latest-version">guide</a> here.', 'whp'), $data['recommended_version']),
             );
 
-        } elseif ($system == $string) {
-            // If EOL is coming up within the next 180 days, show expiring soon message.
-            $msg = $supported_version_message . ' ' . $security_ending_message;
-
-            $this->response_results['php_version'] = array(
-                'status' => 'success',
-                'message' => __('Hurray! Your PHP version is up to date!', 'whp'),
-                'details' => sprintf(__('PHP version %s is recognized as the most secured version as of now. ', 'whp'), $site_version),
-            );
-        } else {
-            // If EOL is farther than 180 days out, show good message.
+        } elseif ($system >= $string) {
+            // If the php version is higher or equal than suggested version, show success message.
             $this->response_results['php_version'] = array(
                 'status' => 'success',
                 'message' => __('Hurray! Your PHP version is up to date!', 'whp'),
@@ -573,16 +572,16 @@ class tableViewOutput
 public function remove_localstorage()
     {
 
-        
+
         if(isset($_REQUEST['activate']) && $_REQUEST['activate']=='true')
-        {  
+        {
         ?>
        <script type="text/javascript">
         localStorage.setItem("wphShowAdminPrompt", '');
         location.reload();
     </script>
-        
-    <?php 
+
+    <?php
 }
     }
 
@@ -642,7 +641,7 @@ public function remove_localstorage()
             if ($value['status'] == 'error') {
                 $this->out_error[] = '
 				<div class="row single_status_block">
-					
+
 					<div class="issue_name">
 						<div class="test_name">' . $this->issues_list[$key]['test_name'] . '</div>
 						<div class="test_message">' . $value['message'] . '</div>
@@ -653,10 +652,10 @@ public function remove_localstorage()
 					<div class="row_control">
 						<div class="hide_control">' . __('Hide', 'whp') . ' <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
 						<div class="show_control">' . __('Details', 'whp') . ' <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-					</div>		
-					<div class="details_block"><strong class="steps_fix">Steps to Fix:</strong> 
+					</div>
+					<div class="details_block"><strong class="steps_fix">Steps to Fix:</strong>
 					' . $value['details'] . '
-					</div>							
+					</div>
 				</div>
 				';
             }
@@ -674,7 +673,7 @@ public function remove_localstorage()
 					<div class="row_control">
 						<div class="hide_control">' . __('Hide', 'whp') . ' <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
 						<div class="show_control">' . __('Details', 'whp') . ' <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-					</div>									
+					</div>
 					-->
 				</div>
 				';
@@ -688,6 +687,7 @@ public function remove_localstorage()
     {
 
 
+        $list_messages = array();
         $cnt = 0;
         foreach ($this->last_results as $key => $value) {
             if ($value['status'] == 'success') {
@@ -700,6 +700,7 @@ public function remove_localstorage()
             $list_messages[] = '<li class="ov_hidden widget_row"> <span class="warning_sign pull-left margin_hor_10" ><i class="fa fa-exclamation-triangle icon_orange" aria-hidden="true"></i></span> <b>' . $this->issues_list[$key]['test_name'] . '</b> ' . $value['message'] . '<span class="warning_sign pull-right margin_hor_10" ><a href="' . admin_url('/admin.php?page=wphwp_harden#audit_bottom_block') . '"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></li>';
             $cnt++;
         }
+
         if (count($list_messages) == 0) {
             $list_messages = array('<li>' . __('Your site is well protected', 'whp') . '</li>');
         }
@@ -723,7 +724,7 @@ public function remove_localstorage()
 
         if ($this->last_results == '' || !$this->last_results) {
             $this->table = '
-			 
+
 			';
         } else {
             $extra_class = '';
@@ -1194,4 +1195,3 @@ class WHP_Change_Login_URL
         return array_merge($wp->public_query_vars, $wp->private_query_vars);
     }
 }
-

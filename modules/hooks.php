@@ -198,7 +198,7 @@ function whp_fixers_processing(){
 	if( $fixer_options['stop_user_enumeration'] == 'on' ){
 		if (!is_admin()) {
 			// default URL format
-			if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])){
+			if (isset($_SERVER['QUERY_STRING']) && preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])){
 			 	wp_redirect( get_option('home'), 302 ); exit;
 			}
 			add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);

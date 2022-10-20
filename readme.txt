@@ -3,8 +3,8 @@ Contributors: astrasecuritysuite, wizak, shikhil
 Donate link: https://www.getastra.com
 Tags:  security, hardening, xmlrpc, user enumeration, custom login url, admin url, Disable WP API JSON, Disable File Editor, Hide WP-includes, WP-content, Remove Version Stylesheet, Remove Version Script, Remove Slider Revolution Meta Generator
 Requires at least: 4.3
-Tested up to: 6.0
-Stable tag: 1.2.5
+Tested up to: 6.0.3
+Stable tag: 1.2.6
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

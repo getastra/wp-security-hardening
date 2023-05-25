@@ -17,7 +17,7 @@ if (!class_exists('whpAddStylesHard')) {
             $this->plugin_prefix = $prefix;
             $this->plugin_version = '1.0';
 
-            add_action('wp_print_scripts', array($this, 'add_script_fn'));
+            add_action('admin_enqueue_scripts', array($this, 'add_script_fn'));
         }
 
         public function add_script_fn()

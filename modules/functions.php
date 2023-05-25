@@ -371,6 +371,7 @@ class issuesScanClass
             'wordfence/wordfence.php',
             'wp-cerber/wp-cerber.php',
             'better-wp-security/better-wp-security.php',
+            'getastra-premium/bridge-wordpress.php',
         );
 
         $active_plugins = get_option('active_plugins');

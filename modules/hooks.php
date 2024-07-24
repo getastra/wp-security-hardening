@@ -128,8 +128,11 @@ function whp_add_toolbar_items($admin_bar){
 // wp enum scann callback
 function shapeSpace_check_enum($redirect, $request) {
 	// permalink URL format
-	if (preg_match('/\?author=([0-9]*)(\/*)/i', $request)) die();
-	else return $redirect;
+	if (!empty( $_GET['author'] ) && is_string( $_GET['author'] ) && preg_match( '|^[0-9]+$|', $_GET['author'])) {
+		die("Not allowed");
+	}
+
+	return $redirect;
 }
 
 // login fix
@@ -198,9 +201,11 @@ function whp_fixers_processing(){
 	if( $fixer_options['stop_user_enumeration'] == 'on' ){
 		if (!is_admin()) {
 			// default URL format
-			if (isset($_SERVER['QUERY_STRING']) && preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])){
-			 	wp_redirect( get_option('home'), 302 ); exit;
+
+			if (!empty( $_GET['author'] ) && is_string( $_GET['author'] ) && preg_match( '|^[0-9]+$|', $_GET['author'] )) {
+				wp_redirect( get_option('home'), 302 ); exit;
 			}
+
 			add_filter('redirect_canonical', 'shapeSpace_check_enum', 10, 2);
 		}
 	}
